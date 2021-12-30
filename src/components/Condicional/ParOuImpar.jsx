@@ -5,9 +5,9 @@ export default props=>{
     return (
         <div>
             {isPar?
-            <span>Par</span>
+            <span>{props.numero} é Par</span>
             :
-            <span>Impar</span>
+            <span>{props.numero} é Impar</span>
             }
         </div>
     )

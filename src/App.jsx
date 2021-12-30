@@ -1,15 +1,20 @@
 import React from "react";
 import './App.css';
+import Input from "./components/formulario/Input";
+import Contador from "./components/contador/Contador";
+import DiretaPai from "./components/Comunicacao/DiretaPai";
 import UsuarioInfo from "./components/Condicional/UsuarioInfo";
 import ParOuImpar from './components/Condicional/ParOuImpar'
 import ComParametro from './components/basicos/ComParametro';
 import Primeiro from './components/basicos/Primeiro'
+import IndiretaPai from "./components/Comunicacao/IndiretaPai";
 import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import Familia from "./components/basicos/Familia";
 import ListaAlunos from "./components/repeticao/ListaAlunos";
 import Card from "./components/basicos/layout/Card";
 import TabelaProdutos from "./components/repeticao/TabelaProdutos";
 import Aleatorio from "./components/basicos/Aleatorio";
+import Mega from "./components/mega/Mega";
 export default function App(){
     return (
     <div className="App">
@@ -41,11 +46,24 @@ export default function App(){
             </Card>
             <Card titulo="Renderizaçao Condicional" color="#AF432E">
                 <ParOuImpar numero={10} />
-                <UsuarioInfo usuario={{nome:'' , email:"Thauan@andre.com"}} />
+                <UsuarioInfo usuario={{nome:'Thauan' , email:"Thauan@andre.com"}} />
+                <UsuarioInfo />
             </Card>
-            {/* <Card titulo="Renderizaçao Condicional2" color="#FF4300">
-                
-            </Card> */}
+            <Card titulo="Comunicacao Direta" color="#FF4300">
+                <DiretaPai></DiretaPai>
+            </Card>
+            <Card titulo="Comunicacao Indireta" color="#020202">
+                <IndiretaPai></IndiretaPai>
+            </Card>
+            <Card titulo="Componente Controlado" color="#E45F56">
+                <Input></Input>
+            </Card>
+            <Card titulo="Contador" color="#E45F56">
+                <Contador numeroInicial={0} passo={2}></Contador >
+            </Card>
+            <Card titulo="MegaSena" color="#Ef5526">
+                <Mega qtde={8}></Mega>
+            </Card>
         </div>
 
     </div>
